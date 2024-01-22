@@ -1,0 +1,127 @@
+version: 2
+
+# Required: Alphabetized by Model Name
+#           Table and Column Descriptions
+#           Access Group assigned and private (except for Mesh models)
+#           Tests
+#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
+
+models:
+  - name: int_banner__entities__filtered_to__organizations
+    meta:
+      grain: "internal_banner_id"
+    config:
+      tags: ["general"]
+    description: "Banner entities filtered to organzation"
+    columns:
+
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+          - unique
+
+      - name: banner_id
+        description: "External Banner ID"
+        tests:
+          - not_null
+          - unique
+
+      - name: organization_name
+        description: "Organization name"
+        tests:
+          - not_null
+
+      - name: uo_email_address
+        description: "University of Oregon email address"
+
+      - name: uo_email_type_desc
+        description: "University of Oregon email address type description"
+
+      - name: ma_phone_area
+        description: "Mailing phone area code"
+
+      - name: ma_phone_number
+        description: "Mailing phone number"
+
+      - name: ma_phone_ext
+        description: "Mailing phone extension"
+
+      - name: ma_intl_access
+        description: "Mailing international access"
+
+      - name: ma_phone_type_desc
+        description: "Mailing phone type description"
+
+      - name: pr_phone_area
+        description: "Permanent phone area code"
+
+      - name: pr_phone_number
+        description: "Permanent phone number"
+
+      - name: pr_phone_ext
+        description: "Permanent phone extension"
+
+      - name: pr_intl_access
+        description: "Permanent international access"
+
+      - name: pr_phone_type_desc
+        description: "Permanent phone type description"
+
+      - name: ma_address_line_1
+        description: "Mailing address line 1"
+
+      - name: ma_address_line_2
+        description: "Mailing address line 2"
+
+      - name: ma_address_line_3
+        description: "Mailing address line 3"
+
+      - name: ma_city
+        description: "Mailing city"
+
+      - name: ma_state_code
+        description: "Mailing state"
+
+      - name: ma_state_desc
+        description: "Mailing state description"
+
+      - name: ma_zip_code
+        description: "Mailing ZIP code"
+
+      - name: ma_nation_code
+        description: "Mailing nation code"
+
+      - name: ma_nation_desc
+        description: "Mailing nation code description"
+
+      - name: pr_address_line_1
+        description: "Permanent address line 1"
+
+      - name: pr_address_line_2
+        description: "Permanent address line 2"
+
+      - name: pr_address_line_3
+        description: "Permanent address line 3"
+
+      - name: pr_city
+        description: "Permanent city"
+
+      - name: pr_state_code
+        description: "Permanent state"
+
+      - name: pr_state_desc
+        description: "Permanent state description"
+
+      - name: pr_zip_code
+        description: "Permanent ZIP code"
+
+      - name: pr_nation_code
+        description: "Permanent nation code"
+
+      - name: pr_nation_desc
+        description: "Permanent nation code description"
+
+      - name: ods_surrogate_key
+        tests:
+          - unique

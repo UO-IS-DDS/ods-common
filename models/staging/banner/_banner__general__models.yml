@@ -1,0 +1,219 @@
+version: 2
+
+# Required: Alphabetized by Model Name
+#           Table and Column Descriptions
+#           Access Group assigned and private (except for Mesh models)
+#           Tests
+#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
+
+models:
+  - name: stg_banner__general__goremal
+    config:
+      tags: ["general"]
+    description: "Banner email address"
+    columns:
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+
+      - name: email_type_code
+        description: "Email address type code"
+
+      - name: email_address
+        description: "Email address"
+
+      - name: is_active
+        description: "Active email address indicator"
+
+      - name: updated_at
+        description: "Creation/change date"
+
+  - name: stg_banner__general__gtvemal
+    config:
+      tags: ["general"]
+    description: "Banner email address type"
+    columns:
+
+      - name: email_type_code
+        description: "Email type code"
+
+      - name: email_type_desc
+        description: "Email type description"
+
+  - name: stg_banner__saturn__spbpers
+    config:
+      tags: ["general"]
+    description: "Banner person detail"
+    columns:
+    
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+
+      - name: preferred_first_name
+        description: "Person preferred first name"
+
+      - name: is_confidential
+        description: "Confidential indicator"
+
+  - name: stg_banner__saturn__spraddr
+    config:
+      tags: ["general"]
+    description: "Banner address"
+    columns:
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+
+      - name: address_type_code
+        description: "Address type code"
+
+      - name: address_seqno
+        description: "Address sequence number"
+
+      - name: address_line_1
+        description: "Address line 1"
+
+      - name: address_line_2
+        description: "Address line 2"
+
+      - name: address_line_3
+        description: "Address line 3"
+
+      - name: city
+        description: "City"
+
+      - name: state_code
+        description: "State/Province code"
+
+      - name: zip_code
+        description: "ZIP code"
+
+      - name: nation_code
+        description: "Nation code"
+
+      - name: is_active
+        description: "Address active indicator"
+
+      - name: updated_at
+        description: "Creation/change date"
+
+  - name: stg_banner__saturn__spriden
+    config:
+      tags: ["general"]
+    description: "Banner ID (active and inactive/duplicate) and legal name (past and present)"
+    columns:
+    
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+
+      - name: banner_id
+        description: "External Banner ID"
+
+      - name: organization_or_last_name
+        description: "Organization or Person last name"
+
+      - name: legal_first_name
+        description: "Person legal first name"
+
+      - name: middle_initial
+        description: "Person middle initial"
+
+      - name: change_ind
+        description: | 
+                     | Value | Description        |
+                     |-------|--------------------|
+                     | A     | Current record     |
+                     | I     | Inactive/Duplicate | 
+                     | N     | Namechange         |
+
+      - name: is_person
+        description: "Person or Organzation indicator"
+
+      - name: updated_at
+        description:  "Creation/change date"
+
+  - name: stg_banner__saturn__sprtele
+    config:
+      tags: ["general"]
+    description: "Banner telephone number"
+    columns:
+
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+
+      - name: phone_seqno
+        description: "Phone record sequence number"
+
+      - name: phone_type_code
+        description: "Phone type code"
+
+      - name: updated_at
+        description: "Creation/change date"
+
+      - name: phone_area
+        description: "Phone area code"
+
+      - name: phone_number
+        description: "Phone number"
+
+      - name: phone_ext
+        description: "Phone extension"
+
+      - name: is_active
+        description: "Phone active indicator"
+
+      - name: is_unlisted
+        description: "Phone unlisted indicator"
+
+      - name: phone_comment
+        description: "Phone comment"
+
+      - name: intl_access
+        description: "International access"
+
+      - name: phone_country_code
+        description: "Phone country code"
+
+  - name: stg_banner__saturn__stvatyp
+    config:
+      tags: ["general"]
+    description: "Banner address type"
+    columns:
+      - name: address_type_code
+        description: "Address type code"
+
+      - name: address_type_desc
+        description: "Address type description"
+
+  - name: stg_banner__saturn__stvnatn
+    config:
+      tags: ["general"]
+    description: "Banner address nation"
+    columns:
+      - name: nation_code
+        description: "Nation code"
+
+      - name: nation_desc
+        description: "Nation description"
+
+  - name: stg_banner__saturn__stvstat
+    config:
+      tags: ["general"]
+    description: "Banner address state/province"
+    columns:
+      - name: state_code
+        data_type: varchar
+        description: "State/Province code"
+
+      - name: state_desc
+        data_type: varchar
+        description: "State/Province description"
+
+  - name: stg_banner__saturn__stvtele
+    config:
+      tags: ["general"]
+    description: "Banner phone type"
+    columns:
+      - name: phone_type_code
+        description: "Phone type code"
+
+      - name: phone_type_code_desc
+        description: "Phone type code description"

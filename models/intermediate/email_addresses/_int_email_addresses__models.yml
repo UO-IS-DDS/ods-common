@@ -1,0 +1,73 @@
+version: 2
+
+# Required: Alphabetized by Model Name
+#           Table and Column Descriptions
+#           Access Group assigned and private (except for Mesh models)
+#           Tests
+#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
+
+models:
+  - name: int_banner__email_address_types
+    meta:
+      grain: "email_type_code"
+    config:
+      tags: ["general"]
+    description: "Banner email address type"
+    columns:
+      - name: email_type_code
+        description: "Email type code"
+        tests:
+          - not_null
+          - unique
+
+      - name: email_type_desc
+        description: "Email type description"
+        tests:
+          - not_null
+          - unique
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
+        
+  - name: int_banner__email_addresses__filtered_to_active
+    meta:
+      grain: "internal_banner_id, email_type_code, email_address"
+    config:
+      tags: ["general","banner_bug"]
+    description: "Banner active email address"
+    columns:
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_banner__entities__filtered_to_active')
+              field: internal_banner_id
+
+      - name: email_type_code
+        description: "Email type code"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_banner__email_address_types')
+              field: email_type_code
+
+      - name: email_address
+        description: "Email address"
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: "Creation/change date"
+        tests:
+          - not_null
+
+      - name: email_type_desc
+        description: "Email type description"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique

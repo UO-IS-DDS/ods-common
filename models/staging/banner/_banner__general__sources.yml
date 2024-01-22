@@ -1,0 +1,47 @@
+version: 2
+
+# Required: Alphabetized by Source Name, Table Name
+#           Empty line between Tables
+#           Table Descriptions
+#           dbt run-operation generate_base_model --args '{"source_name": "banner__saturn", "table_name": "spriden"}'
+#           Paste SQL in newly-created adjacent file: stg_banner__saturn__spriden.sql
+#           Coalesce NULLs, cast, rename, organize fields, explicit-alias columns for visual indexing
+#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"]}'
+#           Paste YML into models.yml
+
+sources:
+  - name: banner__general
+    schema: banner
+    tables:
+      - name: goremal
+        description: "Banner email address"
+      
+      - name: gtvemal
+        description: "Banner email type"
+
+  - name: banner__saturn
+    schema: banner
+    tables:
+      - name: spbpers
+        description: "Banner personal detail"
+
+      - name: spraddr
+        description: "Banner physical address"
+
+      - name: spriden
+        description: "Banner ID and legal name"
+
+      - name: sprtele
+        description: "Banner Telephone"
+      
+      - name: stvatyp
+        description: "Banner address type code validation"
+      
+      - name: stvnatn
+        description: "Banner nation code validation"
+      
+      - name: stvstat
+        description: "Banner state code validation"
+      
+      - name: stvtele
+        description: "Banner phone code validation"

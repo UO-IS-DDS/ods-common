@@ -1,0 +1,52 @@
+version: 2
+
+# Required: Alphabetized by Model Name
+#           Table and Column Descriptions
+#           Access Group assigned and private (except for Mesh models)
+#           Tests
+#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
+
+models:
+  - name: int_banner__entity__name__hist
+    meta:
+      grain: "internal_banner_id, updated_at"
+    config:
+      tags: ["general","banner_bug"]
+    description: "Banner Active and Inactive Names"
+
+    columns:
+
+      - name: is_active
+        description: "Indicator of active Banner ID"
+        tests:
+          - not_null
+
+      - name: organization_or_last_name
+        description: "Organization or Person last name"
+        tests:
+          - not_null
+
+      - name: legal_first_name
+        description: "Person legal first name"
+
+      - name: middle_initial
+        description: "Person middle initial"
+
+      - name: updated_at
+        description: "Creation/change date"
+        tests:
+          - not_null
+
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+
+      - name: is_person
+        description: "'P' for person, 'C' for organization"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
