@@ -11,7 +11,7 @@ models:
     meta:
       grain: "internal_banner_id"
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner entities filtered to organzation"
     columns:
 

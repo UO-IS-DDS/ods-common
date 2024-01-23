@@ -11,7 +11,7 @@ models:
     meta:
       grain: "internal_banner_id, updated_at"
     config:
-      tags: ["general","banner_bug"]
+      tags: ["common","banner_bug"]
     description: "Banner Active and Inactive IDs"
 
     columns:

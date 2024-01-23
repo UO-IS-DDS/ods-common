@@ -12,7 +12,7 @@ models:
     meta:
       grain: "internal_banner_id"
     config:
-      tags: ["general","mart"]
+      tags: ["common","mart"]
     description: "Entity"
     columns:
 
@@ -143,7 +143,7 @@ models:
     meta:
       grain: "internal_banner_id"
     config:
-      tags: ["general","mart"]
+      tags: ["common","mart"]
     description: "Person"
     columns:
 

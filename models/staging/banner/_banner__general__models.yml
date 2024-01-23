@@ -9,7 +9,7 @@ version: 2
 models:
   - name: stg_banner__general__goremal
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner email address"
     columns:
       - name: internal_banner_id
@@ -29,7 +29,7 @@ models:
 
   - name: stg_banner__general__gtvemal
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner email address type"
     columns:
 
@@ -41,7 +41,7 @@ models:
 
   - name: stg_banner__saturn__spbpers
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner person detail"
     columns:
     
@@ -56,7 +56,7 @@ models:
 
   - name: stg_banner__saturn__spraddr
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner address"
     columns:
       - name: internal_banner_id
@@ -97,7 +97,7 @@ models:
 
   - name: stg_banner__saturn__spriden
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner ID (active and inactive/duplicate) and legal name (past and present)"
     columns:
     
@@ -132,7 +132,7 @@ models:
 
   - name: stg_banner__saturn__sprtele
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner telephone number"
     columns:
 
@@ -174,7 +174,7 @@ models:
 
   - name: stg_banner__saturn__stvatyp
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner address type"
     columns:
       - name: address_type_code
@@ -185,7 +185,7 @@ models:
 
   - name: stg_banner__saturn__stvnatn
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner address nation"
     columns:
       - name: nation_code
@@ -196,7 +196,7 @@ models:
 
   - name: stg_banner__saturn__stvstat
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner address state/province"
     columns:
       - name: state_code
@@ -209,7 +209,7 @@ models:
 
   - name: stg_banner__saturn__stvtele
     config:
-      tags: ["general"]
+      tags: ["common"]
     description: "Banner phone type"
     columns:
       - name: phone_type_code
