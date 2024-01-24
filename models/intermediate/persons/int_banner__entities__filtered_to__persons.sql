@@ -1,6 +1,6 @@
 with banner__active_entities as (
 
-  select * from {{ ref('mart_entities') }}
+  select * from {{ ref('dim_entities') }}
 
 ),
 
@@ -9,7 +9,7 @@ filter_to_person as (
   select 
 
   -- banner__active_entities
-  {{ dbt_utils.star(from=ref('mart_entities'),
+  {{ dbt_utils.star(from=ref('dim_entities'),
                     relation_alias='banner__active_entities',
                     except=["ods_surrogate_key",
                             "is_person",

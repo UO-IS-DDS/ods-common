@@ -8,7 +8,7 @@ version: 2
 
 models:
 
-  - name: mart_entities
+  - name: dim_entities
     meta:
       grain: "internal_banner_id"
     config:
@@ -139,7 +139,7 @@ models:
         tests:
           - unique
 
-  - name: mart_persons
+  - name: dim_persons
     meta:
       grain: "internal_banner_id"
     config:
