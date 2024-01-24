@@ -272,4 +272,53 @@ models:
         tests:
           - unique
 
+  - name: odsmgr_person_address_uo
+    meta:
+      grain: "ID"
+    config:
+      tags: ["common","mart"]
+    description: "Person"
+    columns:
+
+      - name: ID
+        description: "External Banner ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: last_name
+        description: "Person last name"
+        tests:
+          - not_null
+
+      - name: first_name
+        description: "Person preferred first name"
+
+      - name: middle_initial
+        description: "Person middle initial"
+
+      - name: mapr_street_line1
+        description: "Mailing (or Permanent) address line 1"
+
+      - name: mapr_street_line2
+        description: "Mailing (or Permanent) address line 2"
+
+      - name: mapr_street_line3
+        description: "Mailing (or Permanent) address line 3"
+
+      - name: mapr_city
+        description: "Mailing (or Permanent) city"
+
+      - name: mapr_state
+        description: "Mailing (or Permanent) state"
+
+      - name: ma_zip
+        description: "Mailing (or Permanent) ZIP code"
+
+      - name: ma_nation
+        description: "Mailing (or Permanent) nation code"
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
  

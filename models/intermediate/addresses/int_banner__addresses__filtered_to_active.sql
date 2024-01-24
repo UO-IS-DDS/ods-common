@@ -1,26 +1,12 @@
-with banner_addresses as (
+with 
 
-   select * from {{ ref('stg_banner__saturn__spraddr') }}
+banner_addresses         as (select * from {{ ref('stg_banner__saturn__spraddr') }}),
 
-),
+banner_address_types     as (select * from {{ ref('int_banner__address_types') }}),
 
-banner_address_types as (
+banner_address_states    as (select * from {{ ref('int_banner__address_state_types') }}),
 
-   select * from {{ ref('int_banner__address_types') }}
-
-),
-
-banner_address_states as (
-
-   select * from {{ ref('int_banner__address_state_types') }}
-
-),
-
-banner_address_nations as (
-
-   select * from {{ ref('int_banner__address_nation_types') }}
-
-),
+banner_address_nations   as (select * from {{ ref('int_banner__address_nation_types') }}),
 
 addresses_and_type_descs as (
 
