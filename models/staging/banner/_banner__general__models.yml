@@ -10,6 +10,7 @@ models:
   - name: stg_banner__general__goremal
     config:
       tags: ["common"]
+      group: common
     description: "Banner email address"
     columns:
       - name: internal_banner_id
@@ -30,6 +31,7 @@ models:
   - name: stg_banner__general__gtvemal
     config:
       tags: ["common"]
+      group: common
     description: "Banner email address type"
     columns:
 
@@ -42,6 +44,7 @@ models:
   - name: stg_banner__saturn__spbpers
     config:
       tags: ["common"]
+      group: common
     description: "Banner person detail"
     columns:
     
@@ -57,6 +60,7 @@ models:
   - name: stg_banner__saturn__spraddr
     config:
       tags: ["common"]
+      group: common
     description: "Banner address"
     columns:
       - name: internal_banner_id
@@ -98,6 +102,7 @@ models:
   - name: stg_banner__saturn__spriden
     config:
       tags: ["common"]
+      group: common
     description: "Banner ID (active and inactive/duplicate) and legal name (past and present)"
     columns:
     
@@ -133,6 +138,7 @@ models:
   - name: stg_banner__saturn__sprtele
     config:
       tags: ["common"]
+      group: common
     description: "Banner telephone number"
     columns:
 
@@ -175,6 +181,7 @@ models:
   - name: stg_banner__saturn__stvatyp
     config:
       tags: ["common"]
+      group: common
     description: "Banner address type"
     columns:
       - name: address_type_code
@@ -186,6 +193,7 @@ models:
   - name: stg_banner__saturn__stvnatn
     config:
       tags: ["common"]
+      group: common
     description: "Banner address nation"
     columns:
       - name: nation_code
@@ -197,6 +205,7 @@ models:
   - name: stg_banner__saturn__stvstat
     config:
       tags: ["common"]
+      group: common
     description: "Banner address state/province"
     columns:
       - name: state_code
@@ -210,6 +219,7 @@ models:
   - name: stg_banner__saturn__stvtele
     config:
       tags: ["common"]
+      group: common
     description: "Banner phone type"
     columns:
       - name: phone_type_code

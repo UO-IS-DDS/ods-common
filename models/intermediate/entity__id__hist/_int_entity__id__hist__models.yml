@@ -12,6 +12,7 @@ models:
       grain: "internal_banner_id, updated_at"
     config:
       tags: ["common","banner_bug"]
+      group: common
     description: "Banner Active and Inactive IDs"
 
     columns:

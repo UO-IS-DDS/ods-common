@@ -7,9 +7,11 @@ models:
       show: false
     config:
       tags: ["cleaning"]
+      group: common
 
   - name: cln_int_banner__entities__filtered_to__persons
     docs:
       show: false
     config:
       tags: ["cleaning"]
+      group: common

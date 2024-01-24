@@ -13,6 +13,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common"]
+      group: common
     description: "Banner addresses pivoted to entities"
     columns:
       - name: internal_banner_id
@@ -88,6 +89,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common","banner_bug"]
+      group: common
     description: "Banner email addresses pivoted to entity"
     columns:
       - name: internal_banner_id
@@ -114,6 +116,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common","banner_bug"]
+      group: common
     description: "Banner active entity"
 
     columns:
@@ -161,6 +164,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common"]
+      group: common
     description: "Banner phones pivoted to entity"
     columns:
 

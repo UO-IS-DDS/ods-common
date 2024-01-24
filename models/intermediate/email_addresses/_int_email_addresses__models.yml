@@ -12,6 +12,7 @@ models:
       grain: "email_type_code"
     config:
       tags: ["common"]
+      group: common
     description: "Banner email address type"
     columns:
       - name: email_type_code
@@ -35,6 +36,7 @@ models:
       grain: "internal_banner_id, email_type_code, email_address"
     config:
       tags: ["common","banner_bug"]
+      group: common
     description: "Banner active email address"
     columns:
       - name: internal_banner_id

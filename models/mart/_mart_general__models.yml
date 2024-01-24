@@ -13,6 +13,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common","mart"]
+      group: common
     description: "Entity"
     columns:
 
@@ -144,6 +145,7 @@ models:
       grain: "internal_banner_id"
     config:
       tags: ["common","mart"]
+      group: common
     description: "Person"
     columns:
 
@@ -277,6 +279,7 @@ models:
       grain: "ID"
     config:
       tags: ["common","mart"]
+      group: common
     description: "Person"
     columns:
 

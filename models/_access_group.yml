@@ -1,0 +1,5 @@
+groups:
+  - name: common
+    owner:
+      name: Common ODS models
+      email: lampman@uoregon.edu
