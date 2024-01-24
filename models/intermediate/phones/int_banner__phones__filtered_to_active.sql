@@ -1,14 +1,8 @@
-with banner_phones as (
+with 
 
-   select * from {{ ref('stg_banner__saturn__sprtele') }}
+banner_phones      as (select * from {{ ref('stg_banner__saturn__sprtele') }}),
 
-),
-
-banner_phone_types as (
-
-   select * from {{ ref('int_banner__phone_types') }}
-
-),
+banner_phone_types as (select * from {{ ref('int_banner__phone_types') }}),
 
 phones_and_type_desc as (
 

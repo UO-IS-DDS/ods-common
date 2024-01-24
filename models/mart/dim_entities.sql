@@ -1,26 +1,12 @@
-with banner_entities as (
+with 
 
-  select * from {{ ref('int_banner__entities__filtered_to_active') }}
+banner_entities         as (select * from {{ ref('int_banner__entities__filtered_to_active') }}),
 
-),
+banner_entity_emails    as (select * from {{ ref('int_banner__email_addresses__pivoted_to__entities') }}),
 
-banner_entity_emails as (
+banner_entity_phones    as (select * from {{ ref('int_banner__phones__pivoted_to__entities') }}),
 
-  select * from {{ ref('int_banner__email_addresses__pivoted_to__entities') }}
-
-),
-
-banner_entity_phones as (
-
-  select * from {{ ref('int_banner__phones__pivoted_to__entities') }}
-
-),
-
-banner_entity_addresses as (
-
-  select * from {{ ref('int_banner__addresses__pivoted_to__entities') }}
-
-),
+banner_entity_addresses as (select * from {{ ref('int_banner__addresses__pivoted_to__entities') }}),
 
 final as (
     

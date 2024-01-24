@@ -1,14 +1,8 @@
-with banner_email_addresses as (
+with 
 
-   select * from {{ ref('stg_banner__general__goremal') }}
+banner_email_addresses     as (select * from {{ ref('stg_banner__general__goremal') }}),
 
-),
-
-banner_email_address_types as (
-
-   select * from {{ ref('int_banner__email_address_types') }}
-
-),
+banner_email_address_types as (select * from {{ ref('int_banner__email_address_types') }}),
 
 emails_and_type_desc as (
 

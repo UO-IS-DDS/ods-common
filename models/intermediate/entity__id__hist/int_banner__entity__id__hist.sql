@@ -1,14 +1,8 @@
-with banner_entities as (
+with 
 
-  select * from {{ ref('stg_banner__saturn__spriden') }}
+banner_entities        as (select * from {{ ref('stg_banner__saturn__spriden') }}),
 
-),
-
-banner_active_entities as (
-
-  select * from {{ ref('int_banner__entities__filtered_to_active') }}
-
-),
+banner_active_entities as (select * from {{ ref('int_banner__entities__filtered_to_active') }}),
 
 banner_inactive_entity_ids as (
 

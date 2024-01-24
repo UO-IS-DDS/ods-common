@@ -1,14 +1,8 @@
-with banner_persons as (
+with 
 
-  select * from {{ ref('int_banner__entities__filtered_to__persons') }}
+banner_persons        as (select * from {{ ref('int_banner__entities__filtered_to__persons') }}),
 
-),
-
-banner_person_details as (
-
-  select * from {{ ref('int_banner__person_details') }}
-
-),
+banner_person_details as (select * from {{ ref('int_banner__person_details') }}),
 
 final as (
     
