@@ -22,17 +22,18 @@ filter_to_active as (
 test_clean as (
 
   select *
-  from filter_to_active
+  from filter_to_active t1
   -- failed test sql
   where not exists (
                     select 
                     
-                           banner_id as unique_field,
+                           t2.banner_id as unique_field,
                            count(*) as n_records
                            
-                    from filter_to_active
-                    where banner_id is not null
-                    group by banner_id
+                    from filter_to_active t2
+                    where t2.banner_id is not null
+                      and t2.banner_id = t1.banner_id
+                    group by t2.banner_id
                     having count(*) > 1
                    )
                      
