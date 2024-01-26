@@ -1,6 +1,6 @@
 with banner__phones as (
 
-  select * from {{ ref('int_banner__phones__filtered_to_active') }}
+  select * from {{ ref('dim_phones') }}
 
 ),
 

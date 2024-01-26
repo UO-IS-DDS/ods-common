@@ -1,6 +1,6 @@
 with 
 
-banner_phones      as (select * from {{ ref('stg_banner__saturn__sprtele') }}),
+banner_phones      as (select * from {{ ref('int_banner__phones__filtered_to_active') }}),
 
 banner_phone_types as (select * from {{ ref('int_banner__phone_types') }}),
 
@@ -9,9 +9,9 @@ phones_and_type_desc as (
   select 
 
   -- banner_phones (driver)
-  {{ dbt_utils.star(from=ref('stg_banner__saturn__sprtele'),
+  {{ dbt_utils.star(from=ref('int_banner__phones__filtered_to_active'),
                     relation_alias='banner_phones',
-                    except=["is_active"]) }},
+                    except=["ods_surrogate_key"]) }},
 
    -- banner_phone_types
   {{ dbt_utils.star(from=ref('int_banner__phone_types'),
@@ -23,7 +23,6 @@ phones_and_type_desc as (
   left join banner_phone_types 
     on banner_phone_types.phone_type_code = 
             banner_phones.phone_type_code
-  where is_active = 'Y'
 
 ),
 
