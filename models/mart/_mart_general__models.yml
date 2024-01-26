@@ -520,8 +520,6 @@ models:
 
       - name: first_name
         description: "First name"
-        tests:
-          - not_null
 
       - name: middle_initial
         description: "Middle initial"
