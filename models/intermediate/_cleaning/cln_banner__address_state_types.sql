@@ -1,0 +1,1 @@
+select * from {{ ref('int_banner__address_state_types') }}

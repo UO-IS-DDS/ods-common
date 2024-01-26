@@ -141,17 +141,6 @@ models:
         tests:
           - not_null
 
-      - name: address_type_desc
-        description: "Address type description"
-        tests:
-          - not_null
-
-      - name: state_desc
-        description: "State/Province description"
-
-      - name: nation_desc
-        description: "Nation description"
-
       - name: ods_surrogate_key
         tests:
           - not_null
