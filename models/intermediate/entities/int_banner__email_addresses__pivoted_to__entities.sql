@@ -1,6 +1,6 @@
 with banner__email_addresses as (
 
-  select * from {{ ref('int_banner__email_addresses__filtered_to_active') }}
+  select * from {{ ref('dim_email_addresses') }}
 
 ),
 

@@ -1,6 +1,6 @@
 with banner__addresses as (
 
-  select * from {{ ref('int_banner__addresses__filtered_to_active') }}
+  select * from {{ ref('dim_addresses') }}
 
 ),
 
