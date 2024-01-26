@@ -445,7 +445,7 @@ models:
     meta:
       grain: "ID"
     config:
-      tags: ["common","mart"]
+      tags: ["common","odsmgr"]
       group: common
     description: "Person"
     columns:
@@ -492,3 +492,45 @@ models:
         tests:
           - unique
  
+  - name: odsmgr_person_detail
+    meta:
+      grain: "ID"
+    config:
+      tags: ["common","odsmgr"]
+      group: common
+    description: "Person detail"
+    columns:
+
+      - name: person_uid
+        description: "Internal Banner ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: id
+        description: "External Banner ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: last_name
+        description: "Last name"
+        tests:
+          - not_null
+
+      - name: first_name
+        description: "First name"
+        tests:
+          - not_null
+
+      - name: middle_initial
+        description: "Middle initial"
+
+      - name: confidentiality_ind
+        description: "Confidential Indicator"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
