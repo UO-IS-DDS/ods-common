@@ -2,21 +2,21 @@ version: 2
 
 models:
 
-  - name: cln_banner__entities__filtered_to_active
+  - name: cln_int_banner__entities__filtered_to_active
     docs:
       show: false
     config:
       tags: ["cleaning"]
       group: common
 
-  - name: cln_banner__entities__filtered_to__persons
+  - name: cln_int_banner__entities__filtered_to__persons
     docs:
       show: false
     config:
       tags: ["cleaning"]
       group: common
 
-  - name: cln_banner__address_state_types
+  - name: cln_int_banner__address_state_types
     docs:
       show: false
     config:
