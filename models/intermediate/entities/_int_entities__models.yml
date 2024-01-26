@@ -1,11 +1,5 @@
 version: 2
 
-# Required: Alphabetized by Model Name
-#           Table and Column Descriptions
-#           Access Group assigned and private (except for Mesh models)
-#           Tests
-#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
-
 models:
 
   - name: int_banner__addresses__pivoted_to__entities
@@ -16,6 +10,7 @@ models:
       group: common
     description: "Banner addresses pivoted to entities"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:
@@ -92,6 +87,7 @@ models:
       group: common
     description: "Banner email addresses pivoted to entity"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:
@@ -118,7 +114,6 @@ models:
       tags: ["common","banner_bug"]
       group: common
     description: "Banner active entity"
-
     columns:
 
       - name: internal_banner_id

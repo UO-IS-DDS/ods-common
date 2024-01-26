@@ -1,12 +1,7 @@
 version: 2
 
-# Required: Alphabetized by Model Name
-#           Table and Column Descriptions
-#           Access Group assigned and private (except for Mesh models)
-#           Tests
-#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
-
 models:
+
   - name: int_banner__entity__id__hist
     meta:
       grain: "internal_banner_id, updated_at"
@@ -14,7 +9,6 @@ models:
       tags: ["common","banner_bug"]
       group: common
     description: "Banner Active and Inactive IDs"
-
     columns:
     
       - name: is_active

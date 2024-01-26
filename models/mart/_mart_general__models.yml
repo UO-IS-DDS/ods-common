@@ -1,11 +1,5 @@
 version: 2
 
-# Required: Alphabetized by Model Name
-#           Table and Column Descriptions
-#           Access Group assigned and private (except for Mesh models)
-#           Tests
-#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
-
 models:
 
   - name: dim_addresses
@@ -85,6 +79,7 @@ models:
       group: common
     description: "Email addresses"
     columns:
+    
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:

@@ -10,6 +10,7 @@ models:
       group: common
     description: "Banner address nation type"
     columns:
+
       - name: nation_code
         description: "Nation code"
         tests:
@@ -34,6 +35,7 @@ models:
       group: common
     description: "Banner address state/province type"
     columns:
+
       - name: state_code
         description: "State/Province code"
         tests:
@@ -58,6 +60,7 @@ models:
       group: common
     description: "Banner address type"
     columns:
+
       - name: address_type_code
         description: "Address type code"
         tests:
@@ -82,6 +85,7 @@ models:
       group: common
     description: "Banner active address"
     columns:
+    
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:

@@ -1,12 +1,7 @@
 version: 2
 
-# Required: Alphabetized by Model Name
-#           Table and Column Descriptions
-#           Access Group assigned and private (except for Mesh models)
-#           Tests
-#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
-
 models:
+
   - name: int_banner__entities__filtered_to__organizations
     meta:
       grain: "internal_banner_id"
@@ -15,7 +10,7 @@ models:
       group: common
     description: "Banner entities filtered to organzation"
     columns:
-
+    
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:
