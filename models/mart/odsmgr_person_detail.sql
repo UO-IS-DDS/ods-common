@@ -1,6 +1,6 @@
 with 
 
-dim_person             as (select * from {{ ref('dim_persons') }}),
+dim_person as (select * from {{ ref('dim_persons') }}),
 
 final as (
     

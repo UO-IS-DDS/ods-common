@@ -8,10 +8,9 @@ filter_to_active as (
 
   select 
     
-  -- banner_entities
-  {{ dbt_utils.star(from=ref('stg_banner__saturn__spriden'),
-                    relation_alias='banner_entities',
-                    except=["change_ind"]) }}
+    {{ dbt_utils.star(from=ref('stg_banner__saturn__spriden'),
+                      relation_alias='banner_entities',
+                      except=["change_ind"]) }}
 
   from banner_entities
   where change_ind = 'A'
