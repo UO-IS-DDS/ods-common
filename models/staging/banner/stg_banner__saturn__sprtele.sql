@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         sprtele_pidm                      as internal_banner_id,
         sprtele_seqno                     as phone_seqno,
         sprtele_tele_code                 as phone_type_code,

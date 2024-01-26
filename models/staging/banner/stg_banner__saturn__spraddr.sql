@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         spraddr_pidm                    as internal_banner_id,
         spraddr_atyp_code               as address_type_code,
         spraddr_seqno                   as address_seqno,

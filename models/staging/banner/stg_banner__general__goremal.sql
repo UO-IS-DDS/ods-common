@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         goremal_pidm                        as internal_banner_id,
         goremal_emal_code                   as email_type_code,
         goremal_email_address               as email_address,

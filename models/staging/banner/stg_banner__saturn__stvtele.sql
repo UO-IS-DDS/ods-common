@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         stvtele_code as phone_type_code,
         stvtele_desc as phone_type_desc
 

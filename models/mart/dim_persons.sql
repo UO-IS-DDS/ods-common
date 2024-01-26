@@ -16,7 +16,9 @@ final as (
   {{ dbt_utils.star(from=ref('int_banner__person_details'),
                     relation_alias='banner_person_details',
                     except=["ods_surrogate_key",
-                            "internal_banner_id"]) }}
+                            "internal_banner_id",
+                            "is_confidential"]) }},
+  coalesce(is_confidential,'N')                              as is_confidential
 
   from banner_persons
   left join banner_person_details

@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         spriden_pidm                     as internal_banner_id,
         spriden_id                       as banner_id,
         spriden_last_name                as organization_or_last_name,

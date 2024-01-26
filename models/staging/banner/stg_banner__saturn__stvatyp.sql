@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         stvatyp_code as address_type_code,
         stvatyp_desc as address_type_desc
 

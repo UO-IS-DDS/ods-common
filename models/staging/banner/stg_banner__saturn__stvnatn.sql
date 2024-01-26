@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         stvnatn_code   as nation_code,
         stvnatn_nation as nation_desc
 

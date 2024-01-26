@@ -1,11 +1,5 @@
 version: 2
 
-# Required: Alphabetized by Model Name
-#           Table and Column Descriptions
-#           Access Group assigned and private (except for Mesh models)
-#           Tests
-#           dbt run-operation generate_model_yaml --args '{"model_names": ["stg_banner__saturn__spriden"], "upstream_descriptions": true}'
-
 models:
   - name: stg_banner__general__goremal
     config:
@@ -13,6 +7,7 @@ models:
       group: common
     description: "Banner email address"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
 
@@ -63,6 +58,7 @@ models:
       group: common
     description: "Banner address"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
 
@@ -184,6 +180,7 @@ models:
       group: common
     description: "Banner address type"
     columns:
+
       - name: address_type_code
         description: "Address type code"
 
@@ -196,6 +193,7 @@ models:
       group: common
     description: "Banner address nation"
     columns:
+
       - name: nation_code
         description: "Nation code"
 
@@ -208,6 +206,7 @@ models:
       group: common
     description: "Banner address state/province"
     columns:
+
       - name: state_code
         data_type: varchar
         description: "State/Province code"
@@ -222,6 +221,7 @@ models:
       group: common
     description: "Banner phone type"
     columns:
+    
       - name: phone_type_code
         description: "Phone type code"
 

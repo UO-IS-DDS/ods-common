@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         gtvemal_code as email_type_code,
         gtvemal_desc as email_type_desc
 

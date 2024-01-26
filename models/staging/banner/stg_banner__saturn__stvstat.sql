@@ -7,6 +7,7 @@ with source as (
 renamed as (
 
     select
+    
         stvstat_code as state_code,
         stvstat_desc as state_desc
 
