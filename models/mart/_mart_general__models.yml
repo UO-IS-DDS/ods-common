@@ -77,6 +77,42 @@ models:
         tests:
           - unique
 
+  - name: dim_email_addresses
+    meta:
+      grain: "internal_banner_id, email_type_code, email_address"
+    config:
+      tags: ["common","mart"]
+      group: common
+    description: "Email addresses"
+    columns:
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+
+      - name: email_type_code
+        description: "Email type code"
+        tests:
+          - not_null
+
+      - name: email_address
+        description: "Email address"
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: "Creation/change date"
+        tests:
+          - not_null
+
+      - name: email_type_desc
+        description: "Email type description"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
 
   - name: dim_entities
     meta:

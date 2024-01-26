@@ -39,6 +39,7 @@ models:
       group: common
     description: "Banner active email address"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:
@@ -62,11 +63,6 @@ models:
 
       - name: updated_at
         description: "Creation/change date"
-        tests:
-          - not_null
-
-      - name: email_type_desc
-        description: "Email type description"
         tests:
           - not_null
 

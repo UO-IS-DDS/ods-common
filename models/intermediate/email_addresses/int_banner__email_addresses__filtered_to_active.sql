@@ -2,26 +2,15 @@ with
 
 banner_email_addresses     as (select * from {{ ref('stg_banner__general__goremal') }}),
 
-banner_email_address_types as (select * from {{ ref('int_banner__email_address_types') }}),
-
-emails_and_type_desc as (
+active_emails as (
 
   select 
 
-  -- banner_email_addresses (driver)
-  {{ dbt_utils.star(from=ref('stg_banner__general__goremal'),
-                    relation_alias='banner_email_addresses',
-                    except=["is_active"]) }},
-
-   -- banner_email_address_types
-  {{ dbt_utils.star(from=ref('stg_banner__general__gtvemal'),
-                    relation_alias='banner_email_address_types',
-                    except=["email_type_code"]) }}
+    {{ dbt_utils.star(from=ref('stg_banner__general__goremal'),
+                      relation_alias='banner_email_addresses',
+                      except=["is_active"]) }}
 
   from banner_email_addresses
-  left join banner_email_address_types 
-    on banner_email_address_types.email_type_code = 
-           banner_email_addresses.email_type_code
   where is_active = 'Y'
 
 ),
@@ -30,7 +19,7 @@ emails_and_type_desc as (
 test_clean as (
 
   select *
-  from emails_and_type_desc t1
+  from active_emails t1
   -- failed test sql
   where t1.internal_banner_id in (
                                   select t2.internal_banner_id
