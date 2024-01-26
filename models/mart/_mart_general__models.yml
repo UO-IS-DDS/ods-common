@@ -380,6 +380,67 @@ models:
         tests:
           - unique
 
+  - name: dim_phones
+    meta:
+      grain: "internal_banner_id, phone_type_code, phone_seqno"
+    config:
+      tags: ["common","mart"]
+      group: common
+    description: "Phones"
+    columns:
+
+      - name: internal_banner_id
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+
+      - name: phone_seqno
+        description: "Phone record sequence number"
+        tests:
+          - not_null
+
+      - name: phone_type_code
+        description: "Phone type code"
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: "Creation/change date"
+        tests:
+          - not_null
+
+      - name: phone_area
+        description: "Phone area code"
+
+      - name: phone_number
+        description: "Phone number"
+
+      - name: phone_ext
+        description: "Phone extension"
+
+      - name: is_unlisted
+        description: "Phone unlisted indicator"
+        tests:
+          - not_null
+
+      - name: phone_comment
+        description: "Phone comment"
+
+      - name: intl_access
+        description: "International access"
+
+      - name: phone_country_code
+        description: "Phone country code"
+
+      - name: phone_type_desc
+        description: "Phone type code description"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
+
   - name: odsmgr_person_address_uo
     meta:
       grain: "ID"

@@ -82,9 +82,6 @@ models:
       - name: phone_country_code
         description: "Phone country code"
 
-      - name: phone_type_desc
-        description: "Phone type code description"
-
       - name: ods_surrogate_key
         tests:
           - unique
