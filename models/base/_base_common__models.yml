@@ -1,0 +1,57 @@
+version: 2
+
+models:
+
+  - name: base__general__goremal
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__general__gtvemal
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__spbpers
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__spraddr
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__spriden
+    config:
+      tags: ["common"]
+      group: common
+  - name: base__saturn__sprtele
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__stvatyp
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__stvatyp
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__stvnatn
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__stvstat
+    config:
+      tags: ["common"]
+      group: common
+
+  - name: base__saturn__stvtele
+    config:
+      tags: ["common"]
+      group: common

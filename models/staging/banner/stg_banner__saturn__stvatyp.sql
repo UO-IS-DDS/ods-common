@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{ source('banner__saturn', 'stvatyp') }}
+    select * from {{ ref('base__saturn__stvatyp') }}
 
 ),
 

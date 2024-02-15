@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{ source('banner__general', 'goremal') }}
+    select * from {{ ref('base__general__goremal') }}
 
 ),
 

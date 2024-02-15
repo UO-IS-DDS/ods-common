@@ -1,0 +1,1 @@
+select * from '{{ var("ods_parquet") }}/common/saturn.stvatyp/*.parquet'
